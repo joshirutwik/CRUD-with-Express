@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <ul style="list-style-type: none;">
+            <li><a href="./">Add</a></li>
+            <li><a href="./display">Display</a></li>
+            </ul>
+            <br><br>
+        
+        <table border="0"> 
+            <tr>
+                <td>Roll</td>
+                <td>Name</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+
+            
+                <% for(var person of users) { %>
+                    <tr>
+                    <td><%= person.roll%></td>
+                    <td><%= person.name %></td>
+                    <td><a href='/edit/<%= person.id %>')">Edit</a></td>
+                    <td ><a href='/delete/<%= person.id %>'>Delete</a></td>
+                    </tr>
+                <% } %>
+           
+        </table>
+    </body>
+</html>
